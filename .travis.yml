@@ -11,7 +11,6 @@ install:
   - pip install -r install/requirements.txt
   - pip install -r install/requirements-tests.txt
   - pip install pytest-cov coveralls flake8
-  - alias py.test-3='pytest'
 before_script:
     # stop the build if there are Python syntax errors or undefined names
     - flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
@@ -19,7 +18,7 @@ before_script:
     - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 # run CLI tests and local GUI tests
 script:
-  - py.test-3 tests/
+  - pytest tests/
   - cd tests_gui_local/ && ./run_unit_tests.sh
 after_success:
   - coveralls

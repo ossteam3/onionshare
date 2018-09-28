@@ -146,7 +146,7 @@ pip3 install -r install/requirements-tests.txt
 If you'd like to run the CLI-based tests that Travis runs:
 
 ```sh
-py.test-3 tests/
+pytest tests/
 ```
 
 If you would like to run the GUI unit tests in 'local only mode':
