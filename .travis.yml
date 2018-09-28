@@ -1,6 +1,6 @@
 language: python
-# sudo: required
-dist: bionic
+dist: trust
+sudo: required
 python:
   - "3.6"
   - "3.6-dev"
@@ -8,7 +8,7 @@ python:
   - "nightly"
 # command to install dependencies
 install:
-  - sudo apt-get update
+  - sudo apt-get update && sudo apt-get install python3-pyqt5
   - pip install -r install/requirements.txt
   - pip install -r install/requirements-tests.txt
   - pip install pytest-cov coveralls flake8
