@@ -1,5 +1,5 @@
 language: python
-dist: trust
+dist: trusty
 sudo: required
 python:
   - "3.6"
