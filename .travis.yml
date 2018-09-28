@@ -20,6 +20,6 @@ before_script:
 # run CLI tests and local GUI tests
 script:
   - pytest tests/
-  - cd tests_gui_local/ && ./run_unit_tests.sh
+  - cd tests_gui_local/ && xvfb-run ./run_unit_tests.sh
 after_success:
   - coveralls
