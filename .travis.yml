@@ -8,7 +8,7 @@ python:
   - "nightly"
 # command to install dependencies
 install:
-  - apt-cache search qt5
+  - sudo apt-get update
   - pip install -r install/requirements.txt
   - pip install -r install/requirements-tests.txt
   - pip install pytest-cov coveralls flake8
