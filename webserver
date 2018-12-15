@@ -1,0 +1,9 @@
+
+import webbrowser
+
+
+class webbro:
+
+    def __init__(self):
+        url ='https://www.torproject.org/projects/torbrowser.html.en'
+        webbrowser.open(url)
