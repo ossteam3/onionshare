@@ -1,0 +1,32 @@
+import sys
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
+from PyQt5.QtCore import QCoreApplication
+import webserver 
+
+class ExWindow(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+        self.init_ui()
+
+    def init_ui(self):
+        self.setGeometry(300,300,300,300)
+        self.setWindowTitle('onion gui')
+        
+        btn = QPushButton('tor browser',self)
+        btn.resize(btn.sizeHint())
+        btn.setToolTip('download tor browser.')
+        btn.move(100,120)
+        btn.clicked.connect(self.btn1)
+
+        self.show()
+
+    def btn1(self):
+        webserver.webbro()
+
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = ExWindow()
+    sys.exit(app.exec_())
